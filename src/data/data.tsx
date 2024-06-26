@@ -1,4 +1,4 @@
-export const categories = [
+export const categories:Array<string> = [
   "shapes",
   /* "fruits",
   "vegatables",
@@ -9,8 +9,13 @@ export const categories = [
   "air-transport",
 ];
 
+export type Image = {
+  img: string,
+  alt: string
+}
+
 // Min 5 images per category
-const shapes = [
+const shapes: Array<Image> = [
   {
     img: "http://localhost:3000/images/memory-game/shapes/circle.jpeg",
     alt: "circle",

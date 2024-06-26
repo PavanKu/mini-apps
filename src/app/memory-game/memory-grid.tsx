@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Box } from "@/components/common/box";
+import Heading from "@/components/common/heading";
 import { Grid } from "@/components/common/layout";
-import Image from "next/image";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,7 +11,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getConfigByLevel } from "./dataUtils";
 
 type MemoryGridProps = {
@@ -93,7 +93,7 @@ export default function MemoryGrid({
 
   return (
     <>
-      <h1 className="text-center font-thin text-5xl mb-5 text-slate-500">{`Level ${level}`}</h1>
+      <Heading>{`Level ${level}`}</Heading>
       <div className="mb-5 flex justify-between">
         <div className="font-thin text-lg text-slate-700">
           Missed: {missedCount}

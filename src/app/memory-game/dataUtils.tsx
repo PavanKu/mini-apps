@@ -1,4 +1,4 @@
-import { categories, imageMap } from "./data";
+import { categories, imageMap } from "../../data/data";
 
 type levelConfigType = {
     background: string,
